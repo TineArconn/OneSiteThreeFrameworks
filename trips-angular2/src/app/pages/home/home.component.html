@@ -1,0 +1,30 @@
+<app-navbar></app-navbar>
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Trips, trips and trips</h1>
+    <div class="d-flex justify-content-center">
+      <p class="lead w-50">
+        A collection of my favorite trips around the world !
+      </p>
+    </div>
+    <p>
+      <a routerLink="/trips/new" class="btn btn-primary">Add New Trip</a>
+    </p>
+  </div>
+</section>
+<section class="container">
+  <div class="row">
+    <ng-container *ngFor="let trip of tripService.getTrips()">
+      <div class="col d-flex justify-content-center">
+        <div class="card">
+          <img class="card-img-top" [src]="trip.imageUrl" alt="{{trip.title}}">
+          <div class="card-body">
+            <h5 class="card-title">{{trip.title}}</h5>
+            <p class="card-text">{{trip.description}}</p>
+            <a routerLink="/trips/{{trip.id}}" class="btn btn-primary">View</a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</section>

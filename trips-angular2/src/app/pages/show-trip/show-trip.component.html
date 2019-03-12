@@ -1,0 +1,41 @@
+<app-navbar></app-navbar>
+<img src="{{trip.imageUrl}}" alt="{{}trip.title}" class="header-image">
+<div class="container">
+  <div class="row w-100 d-flex justify-content-end">
+    <button class="btn btn-danger" (click)="deleteTrip()">Delete</button>
+  </div>
+  <div class="row d-flex justify-content-center">
+    <div class="col-6">
+      <h1 class="text-center">{{trip.title}}</h1>
+      <p class=" text-center">{{trip.description}}</p>
+</div>
+</div>
+<div class="main">
+  <div class="row d-flex justify-content-center">
+    <div class="col-12 text-center">
+      <h3>Time: <span class="time">{{trip.time}}</span></h3>
+    </div>
+  </div>
+  <hr>
+  <div class="row d-flex justify-content-center">
+    <div class="col-4 text-center">
+      <h3>Peoples</h3>
+      <div *ngFor="let people of trip.peoples">
+        {{people.name}} - {{people.description}}
+      </div>
+    </div>
+    <div class="col-6">
+      <h3 class="text-center">Tags</h3>
+      <ol>
+        <li *ngFor="let tag of trip.tags">{{tag}}</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="row back-and-edit d-flex justify-content-center">
+  <button class="btn btn-primary" (click)="back()">Back</button>
+  <button class="btn btn-primary" routerLink="/trips/edit/{{trip.id}}">Edit</button>
+</div>
+
+</div>

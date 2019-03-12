@@ -1,0 +1,59 @@
+{
+    "trips" : [
+    {
+        "id": 1,
+        "title" : "My first travel !",
+        "description" : "Waouh !",
+        "time" : "2 days",
+        "imageUrl": "assets/1.jpg",
+        "peoples" : [
+            {
+                "name": "Bob",
+                "description" : "my friend !"
+            },
+            {
+                "name": "Homer",
+                "description" : "the guide"
+            }
+        ],
+        "tags" : ["awesome", "travel"]
+
+    },
+    {
+        "id": 2,
+        "title" : "Other side",
+        "description" : "Love it",
+        "time" : "5 days",
+        "imageUrl": "assets/2.jpg",
+        "peoples" : [
+            {
+                "name": "Bob",
+                "description" : "my friend, again !"
+            },
+            {
+                "name": "Myriam",
+                "description" : "a local resident"
+            }
+        ],
+        "tags" : ["meet", "landscape"]
+    },
+    {
+        "id": 3,
+        "title" : "Meeting",
+        "description" : "Can't describe this",
+        "time" : "12 days",
+        "imageUrl": "assets/3.jpg",
+        "peoples" : [
+            {
+                "name": "Bob",
+                "description" : "my friend, again and again !"
+            },
+            {
+                "name": "Jean",
+                "description" : "a local resident"
+            }
+        ],
+        "tags" : ["awesome", "travel", "meet"]
+
+    }
+]}
